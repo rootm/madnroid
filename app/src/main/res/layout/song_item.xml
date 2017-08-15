@@ -19,12 +19,13 @@
         android:layout_gravity="center_vertical"/>
 
     <ImageButton
+        android:id="@+id/favButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/favButton"
-        android:background="@drawable/favicon"
+        android:layout_gravity="center_vertical"
         android:layout_marginRight="15dp"
-        android:layout_gravity="center_vertical"/>
+        android:background="@drawable/favicon"
+        android:visibility="gone" />
 
     <ImageButton
         android:id="@+id/optionButton"
@@ -35,8 +36,8 @@
         android:background="@android:color/transparent"
         android:paddingBottom="5dp"
         android:paddingLeft="10dp"
-        android:paddingRight="18dp"
+        android:paddingRight="15dp"
         android:paddingTop="5dp"
-        android:src="@drawable/optionicon" />
+        android:src="@drawable/option" />
 
 </LinearLayout>

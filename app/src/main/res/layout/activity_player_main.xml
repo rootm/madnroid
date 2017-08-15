@@ -33,7 +33,8 @@
                 android:id="@+id/mainToolBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#e5232323">
+                android:background="#232323"
+                android:title="Music Player">
 
             </android.support.v7.widget.Toolbar>
 
