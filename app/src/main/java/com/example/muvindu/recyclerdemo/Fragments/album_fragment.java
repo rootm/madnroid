@@ -1,13 +1,18 @@
 package com.example.muvindu.recyclerdemo.Fragments;
 
 
+import android.Manifest;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -61,12 +66,20 @@ private RecyclerView recView ;
 
 
         albumLoader=new Album_loader(recView.getContext());
-        adapter = new AlbumAdapter(albumLoader.AlbumList(),recView.getContext());
-        recView.setAdapter(adapter);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            Toast.makeText(getActivity(), "Permission checking", Toast.LENGTH_SHORT).show();
+            checkPermission();
+        }
+
+
+
 
 
 
         return recView;
+
+
 
     //    return inflater.inflate(R.layout.fragment_album_fragment, container, false);
     }
@@ -92,5 +105,40 @@ private RecyclerView recView ;
     }
 
 
+    private void checkPermission() {
+        if (ContextCompat.checkSelfPermission(getActivity(),
 
+                Manifest.permission.READ_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {//Can add more as per requirement
+
+            ActivityCompat.requestPermissions(getActivity(),
+                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                    123);
+
+        } else {
+            adapter = new AlbumAdapter(albumLoader.AlbumList(),recView.getContext());
+            recView.setAdapter(adapter);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case 123: {
+
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED)     {
+
+                    Toast.makeText(getActivity(), "Permission granted", Toast.LENGTH_SHORT).show();
+                    adapter = new AlbumAdapter(albumLoader.AlbumList(),recView.getContext());
+                    recView.setAdapter(adapter);
+
+                } else {
+                    Toast.makeText(getActivity(), "Permission denied", Toast.LENGTH_SHORT).show();
+                    //checkPermission();
+                }
+                return;
+            }
+        }
+    }
 }

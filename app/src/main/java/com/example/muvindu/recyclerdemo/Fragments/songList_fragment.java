@@ -1,13 +1,17 @@
 package com.example.muvindu.recyclerdemo.Fragments;
 
+import android.Manifest;
 import android.content.ContentResolver;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.AppCompatDrawableManager;
@@ -17,6 +21,7 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.muvindu.recyclerdemo.DataLoader.SongList_loader;
 import com.example.muvindu.recyclerdemo.Model.Song;
@@ -39,8 +44,11 @@ public class songList_fragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         recView=(RecyclerView)inflater.inflate(R.layout.songlist_fragment,container,false);
         recView.setLayoutManager(new LinearLayoutManager(recView.getContext()));
-        adapter = new SongAdapter(SongList(),recView.getContext(),getActivity());
-        recView.setAdapter(adapter);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            Toast.makeText(getActivity(), "Permission checking", Toast.LENGTH_SHORT).show();
+            checkPermission();
+        }
+
 
        /* recView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -166,7 +174,41 @@ return simpleCallback;
 
 
 
+    private void checkPermission() {
+        if (ContextCompat.checkSelfPermission(getActivity(),
 
+                Manifest.permission.READ_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED ) {//Can add more as per requirement
+
+            ActivityCompat.requestPermissions(getActivity(),
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE},
+                    123);
+
+        } else {
+            adapter = new SongAdapter(SongList(),recView.getContext(),getActivity());
+            recView.setAdapter(adapter);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case 123: {
+
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED)     {
+
+                    Toast.makeText(getActivity(), "Permission granted", Toast.LENGTH_SHORT).show();
+                    adapter = new SongAdapter(SongList(),recView.getContext(),getActivity());
+                    recView.setAdapter(adapter);
+                } else {
+                    Toast.makeText(getActivity(), "Permission denied", Toast.LENGTH_SHORT).show();
+                    //checkPermission();
+                }
+                return;
+            }
+        }
+    }
 
 
 }
