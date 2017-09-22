@@ -164,6 +164,7 @@ public class nowPlaying extends AppCompatActivity{
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if (fromUser){
                  //   player.mediaPlayer.seekTo(progress);
+                    mediaController.getTransportControls().seekTo(progress);
                 }
             }
 

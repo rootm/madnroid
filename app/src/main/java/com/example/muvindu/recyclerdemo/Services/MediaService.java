@@ -133,6 +133,11 @@ public class MediaService extends Service implements MediaPlayer.OnCompletionLis
             }
         }
     };
+    private void register_playNewAudio() {
+        //Register playNewMedia receiver
+        IntentFilter filter = new IntentFilter(music.Broadcast_PLAY_NEW_AUDIO);
+        registerReceiver(playNew, filter);
+    }
 
     private BroadcastReceiver stopAudio = new BroadcastReceiver() {
         @Override
@@ -141,11 +146,6 @@ public class MediaService extends Service implements MediaPlayer.OnCompletionLis
         }
     };
 
-    private void register_playNewAudio() {
-        //Register playNewMedia receiver
-        IntentFilter filter = new IntentFilter(music.Broadcast_PLAY_NEW_AUDIO);
-        registerReceiver(playNew, filter);
-    }
 
 
     private void register_stopAudio() {

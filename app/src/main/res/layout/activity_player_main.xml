@@ -33,8 +33,9 @@
                 android:id="@+id/mainToolBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#232323"
-                android:title="Music Player">
+                android:background="@color/colorTaNew"
+                android:title="Music Player"
+                android:visibility="gone">
 
             </android.support.v7.widget.Toolbar>
 

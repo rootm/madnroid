@@ -28,6 +28,7 @@ import static com.example.muvindu.recyclerdemo.Services.serviceConnection.servic
 public class music extends Activity{
     public static final String Broadcast_PLAY_NEW_AUDIO = "com.example.muvindu.recyclerdemo.PlayNewAudio";
     serviceConnection connection=new serviceConnection();
+    serviceStat state =new serviceStat();
     private Handler handler=new Handler();
 
     public void playAudio(String data, int position , Context contextView) {
@@ -35,7 +36,9 @@ public class music extends Activity{
 
 
         Intent playerIntent = new Intent(contextView, MusicService.class);
-        if (!serviceBound ) {
+        boolean running=state.isMyServiceRunning(contextView.getApplicationContext());
+
+        if (!running ) {
 
             playerIntent.putExtra("filePath", data);
             playerIntent.putExtra("id", position);
@@ -44,7 +47,7 @@ public class music extends Activity{
            // contextView.getApplicationContext().bindService(playerIntent, connection.newServiceConnection, Context.BIND_AUTO_CREATE);
 
            // progressBar.setProgress(0);
-            handler.postDelayed(thread,100);
+           // handler.postDelayed(thread,100);
         } else{
 
             //Intent playerIntent = new Intent(contextView, MediaService.class);

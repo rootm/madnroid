@@ -4,9 +4,11 @@ import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 
+import android.content.BroadcastReceiver;
 import android.content.ContentUris;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.AudioManager;
@@ -32,6 +34,7 @@ import android.widget.RemoteViews;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.NotificationTarget;
+import com.example.muvindu.recyclerdemo.Audio.music;
 import com.example.muvindu.recyclerdemo.Model.Song;
 
 import com.example.muvindu.recyclerdemo.Services.PlaybackStatus;
@@ -80,7 +83,28 @@ public class MusicService extends MediaBrowserServiceCompat  implements MediaPla
     //AudioPlayer notification ID
     private static final int NOTIFICATION_ID = 0116;
 
+    private BroadcastReceiver playNew = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            try {
+                file = intent.getExtras().getString("filePath");
+                currentID = intent.getExtras().getInt("id");
+            } catch (NullPointerException e) {
+                stopSelf();
+            }
 
+            if (file != null && file != "") {
+                stop();
+                // mediaPlayer.reset();
+                initializePlayer();
+            }
+        }
+    };
+    private void register_playNewAudio() {
+        //Register playNewMedia receiver
+        IntentFilter filter = new IntentFilter(music.Broadcast_PLAY_NEW_AUDIO);
+        registerReceiver(playNew, filter);
+    }
 
     private MediaSessionCompat.Callback callback=new MediaSessionCompat.Callback() {
         @Override
@@ -124,6 +148,12 @@ public class MusicService extends MediaBrowserServiceCompat  implements MediaPla
 
 
         }
+
+        @Override
+        public void onSeekTo(long pos) {
+            super.onSeekTo(pos);
+            mediaPlayer.seekTo((int)pos);
+        }
     };
 
     //endregion
@@ -155,7 +185,7 @@ public class MusicService extends MediaBrowserServiceCompat  implements MediaPla
     @Override
     public void onCreate() {
         super.onCreate();
-
+        register_playNewAudio();
         mediaSession=new MediaSessionCompat(this,"MediaService");
         transportControls = mediaSession.getController().getTransportControls();
         //set MediaSession -> ready to receive media commands
@@ -172,11 +202,14 @@ public class MusicService extends MediaBrowserServiceCompat  implements MediaPla
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+
         if (!intent.getAction().toString().equalsIgnoreCase("PLAYER_START")){
 
             handleIncomingActions(intent);
             return super.onStartCommand(intent, flags, startId);
         }
+
+
         try {
             file = intent.getExtras().getString("filePath");
             currentID = intent.getExtras().getInt("id");
@@ -211,6 +244,8 @@ public class MusicService extends MediaBrowserServiceCompat  implements MediaPla
             stop();
             mediaPlayer.release();
         }
+
+        unregisterReceiver(playNew);
         removeAudioFocus();
         removeNotification();
         mediaSession.release();

@@ -180,7 +180,7 @@ public class player_main extends AppCompatActivity {
         TabLayout tabs = (TabLayout) findViewById(R.id.mainTabLayout);
 
         tabs.setTabTextColors( ContextCompat.getColor(this, android.R.color.white),ContextCompat.getColor(this, android.R.color.holo_red_dark));
-        tabs.setBackgroundColor(ContextCompat.getColor(this, R.color.colorTab));
+        tabs.setBackgroundColor(ContextCompat.getColor(this, R.color.colorTaNew));
         tabs.setSelectedTabIndicatorColor(ContextCompat.getColor(this, android.R.color.holo_red_dark));
         tabs.setSmoothScrollingEnabled(true);
         tabs.setupWithViewPager(viewPager);
