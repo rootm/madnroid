@@ -70,6 +70,10 @@ private RecyclerView recView ;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             Toast.makeText(getActivity(), "Permission checking", Toast.LENGTH_SHORT).show();
             checkPermission();
+        }else{
+
+            adapter = new AlbumAdapter(albumLoader.AlbumList(),recView.getContext());
+            recView.setAdapter(adapter);
         }
 
 

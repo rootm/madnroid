@@ -187,7 +187,7 @@ public class nowPlaying extends AppCompatActivity{
          albumImage =(ImageView) findViewById(R.id.albumImage);
         final float height=(getscreenHeigth(this));
 
-        if(getscreenHeigth(this)<=500){
+      /*  if(getscreenHeigth(this)<=500){
             albumImage.getLayoutParams().height= (int)(height/2.45);
             albumImage.getLayoutParams().width= (int)(height/2.45);
             albumImage.requestLayout();
@@ -209,7 +209,7 @@ public class nowPlaying extends AppCompatActivity{
             albumImage.getLayoutParams().height= (int)(height/1.15);
             albumImage.getLayoutParams().width= (int)(height/1.15);
             albumImage.requestLayout();
-        }
+        }*/
 
 
         album=(TextView) findViewById(R.id.albumName);
@@ -227,7 +227,7 @@ public class nowPlaying extends AppCompatActivity{
             @Override
             public void onAdLoaded() {
                 super.onAdLoaded();
-                if (height<=500){
+              /*  if (height<=500){
                     albumImage.getLayoutParams().height= (int)(height/2.7);
                     albumImage.getLayoutParams().width= (int)(height/2.7);
                     albumImage.requestLayout();
@@ -242,7 +242,7 @@ public class nowPlaying extends AppCompatActivity{
                 albumImage.requestLayout();
 
 
-            }
+            }*/
                 if (mAdView.getVisibility() == View.GONE) {
                     mAdView.setVisibility(View.VISIBLE);
                 }
@@ -369,9 +369,9 @@ public class nowPlaying extends AppCompatActivity{
 
     private  void setImage(int state){
 
-        if (state==0){Glide.with(this).load(mediaMetadata.getString(MediaMetadataCompat.METADATA_KEY_ALBUM_ART_URI)).centerCrop().into(albumImage);}
+        if (state==0){Glide.with(this).load(mediaMetadata.getString(MediaMetadataCompat.METADATA_KEY_ALBUM_ART_URI)).centerCrop().fitCenter().into(albumImage);}
         else if (state==1){
-            Glide.with(this).load(mediaMetadata.getString(MediaMetadataCompat.METADATA_KEY_ALBUM_ART_URI)).centerCrop().error( R.drawable.albumartxxx).animate(R.anim.right2mid).listener(new RequestListener<String, GlideDrawable>() {
+            Glide.with(this).load(mediaMetadata.getString(MediaMetadataCompat.METADATA_KEY_ALBUM_ART_URI)).centerCrop().fitCenter().error( R.drawable.albumartxxx).animate(R.anim.right2mid).listener(new RequestListener<String, GlideDrawable>() {
                 @Override
                 public boolean onException(Exception e, String s, Target<GlideDrawable> target, boolean b) {
                     return false;
@@ -387,7 +387,7 @@ public class nowPlaying extends AppCompatActivity{
             }).into(albumImage);
         }
         else if((state==2)){
-            Glide.with(this).load(mediaMetadata.getString(MediaMetadataCompat.METADATA_KEY_ALBUM_ART_URI)).centerCrop().error( R.drawable.albumartxxx).animate(R.anim.left2mid).listener(new RequestListener<String, GlideDrawable>() {
+            Glide.with(this).load(mediaMetadata.getString(MediaMetadataCompat.METADATA_KEY_ALBUM_ART_URI)).centerCrop().fitCenter().error( R.drawable.albumartxxx).animate(R.anim.left2mid).listener(new RequestListener<String, GlideDrawable>() {
                 @Override
                 public boolean onException(Exception e, String s, Target<GlideDrawable> target, boolean b) {
                     return false;

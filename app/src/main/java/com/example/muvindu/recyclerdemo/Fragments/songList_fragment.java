@@ -47,6 +47,10 @@ public class songList_fragment extends Fragment{
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             Toast.makeText(getActivity(), "Permission checking", Toast.LENGTH_SHORT).show();
             checkPermission();
+        }else{
+
+            adapter = new SongAdapter(SongList(),recView.getContext(),getActivity());
+            recView.setAdapter(adapter);
         }
 
 
