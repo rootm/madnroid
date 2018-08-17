@@ -1,6 +1,7 @@
 package com.example.muvindu.recyclerdemo.UI;
 
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
@@ -33,6 +34,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.example.muvindu.recyclerdemo.DataLoader.Album_loader;
 import com.example.muvindu.recyclerdemo.Fragments.album_fragment;
+import com.example.muvindu.recyclerdemo.Fragments.playList_fragment;
 import com.example.muvindu.recyclerdemo.Fragments.songList_fragment;
 
 import com.example.muvindu.recyclerdemo.MusicService;
@@ -47,6 +49,8 @@ import com.google.firebase.crash.FirebaseCrash;
 
 import static com.example.muvindu.recyclerdemo.MusicService.mediaPlayer;
 import static com.example.muvindu.recyclerdemo.Services.serviceConnection.player;
+import static com.example.muvindu.recyclerdemo.Utils.PlayList.createPlaylist;
+
 import static com.example.muvindu.recyclerdemo.Utils.utils.getscreenSize;
 
 
@@ -229,6 +233,12 @@ public class player_main extends AppCompatActivity {
 
         handler.postDelayed(thread,300);
 
+
+
+
+
+
+
     }
 
 
@@ -238,10 +248,8 @@ public class player_main extends AppCompatActivity {
         pageAdapter adapter = new pageAdapter(getSupportFragmentManager());
         adapter.addFragment(new songList_fragment(), "Songs");
         adapter.addFragment(new album_fragment(), "Album");
-        adapter.addFragment(new songList_fragment(), "Artist");
-        adapter.addFragment(new songList_fragment(), "Songs");
-        adapter.addFragment(new album_fragment(), "Album");
-        adapter.addFragment(new songList_fragment(), "Artist");
+        adapter.addFragment(new playList_fragment(), "PlayList");
+
 
 
         viewPager.setAdapter(adapter);
@@ -360,6 +368,8 @@ public class player_main extends AppCompatActivity {
            handler.postDelayed(thread,500);
         }
     });
+
+
 
 
 }

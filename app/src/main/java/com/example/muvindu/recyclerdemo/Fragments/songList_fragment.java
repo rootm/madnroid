@@ -31,6 +31,9 @@ import com.example.muvindu.recyclerdemo.adapter.SongAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.muvindu.recyclerdemo.Utils.PlayList.createPlaylist;
+import static com.example.muvindu.recyclerdemo.Utils.PlayList.queryPlaylists;
+
 /**
  * Created by Muvindu on 12/8/2016.
  */
@@ -45,7 +48,7 @@ public class songList_fragment extends Fragment{
         recView=(RecyclerView)inflater.inflate(R.layout.songlist_fragment,container,false);
         recView.setLayoutManager(new LinearLayoutManager(recView.getContext()));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            Toast.makeText(getActivity(), "Permission checking", Toast.LENGTH_SHORT).show();
+          //  Toast.makeText(getActivity(), "Permission checking", Toast.LENGTH_SHORT).show();
             checkPermission();
         }else{
 
@@ -179,18 +182,19 @@ return simpleCallback;
 
 
     private void checkPermission() {
-        if (ContextCompat.checkSelfPermission(getActivity(),
-
-                Manifest.permission.READ_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED ) {//Can add more as per requirement
+        if (ContextCompat.checkSelfPermission(getActivity(),  Manifest.permission.READ_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(getActivity(),  Manifest.permission.WRITE_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED) {//Can add more as per requirement
 
             ActivityCompat.requestPermissions(getActivity(),
                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE},
                     123);
 
         } else {
+            Cursor c;
             adapter = new SongAdapter(SongList(),recView.getContext(),getActivity());
             recView.setAdapter(adapter);
+
+
+
         }
     }
 
@@ -202,9 +206,13 @@ return simpleCallback;
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED)     {
 
-                    Toast.makeText(getActivity(), "Permission granted", Toast.LENGTH_SHORT).show();
+
+
+                  //  Toast.makeText(getActivity(), "Permission granted", Toast.LENGTH_SHORT).show();
                     adapter = new SongAdapter(SongList(),recView.getContext(),getActivity());
                     recView.setAdapter(adapter);
+                  //
+
                 } else {
                     Toast.makeText(getActivity(), "Permission denied", Toast.LENGTH_SHORT).show();
                     //checkPermission();

@@ -43,7 +43,7 @@ import static com.example.muvindu.recyclerdemo.Utils.utils.getscreenSize;
  */
 public class album_fragment extends Fragment {
 
-private RecyclerView recView ;
+    private RecyclerView recView ;
     private AlbumAdapter adapter;
     private Album_loader albumLoader;
 
@@ -68,7 +68,7 @@ private RecyclerView recView ;
         albumLoader=new Album_loader(recView.getContext());
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            Toast.makeText(getActivity(), "Permission checking", Toast.LENGTH_SHORT).show();
+         //   Toast.makeText(getActivity(), "Permission checking", Toast.LENGTH_SHORT).show();
             checkPermission();
         }else{
 
@@ -133,7 +133,7 @@ private RecyclerView recView ;
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED)     {
 
-                    Toast.makeText(getActivity(), "Permission granted", Toast.LENGTH_SHORT).show();
+                 //   Toast.makeText(getActivity(), "Permission granted", Toast.LENGTH_SHORT).show();
                     adapter = new AlbumAdapter(albumLoader.AlbumList(),recView.getContext());
                     recView.setAdapter(adapter);
 

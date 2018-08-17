@@ -80,6 +80,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.viewHolder> 
         final TextView numsongs= holder.numSongs;
          Bitmap bitmap=null;
        // Glide.with(holder.albumImage.getContext()).load(R.drawable.albumartxxx).fitCenter().into(holder.albumImage);
+
         Glide.with(holder.albumImage.getContext()).load(uri).asBitmap().fitCenter().centerCrop().error(R.drawable.albumartxxx).listener(new RequestListener<Uri, Bitmap>() {
             @Override
             public boolean onException(Exception e, Uri uri, Target<Bitmap> target, boolean b) {
