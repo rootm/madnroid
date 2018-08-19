@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.Fragments;
+package com.example.pathum.MusicPlayer.Fragments;
 
 import android.Manifest;
 import android.content.ContentResolver;
@@ -23,18 +23,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.muvindu.recyclerdemo.DataLoader.SongList_loader;
-import com.example.muvindu.recyclerdemo.Model.Song;
-import com.example.muvindu.recyclerdemo.R;
-import com.example.muvindu.recyclerdemo.Utils.PlayList;
-import com.example.muvindu.recyclerdemo.adapter.SongAdapter;
+import com.example.pathum.MusicPlayer.DataLoader.SongList_loader;
+import com.example.pathum.MusicPlayer.Model.Song;
+import com.example.pathum.MusicPlayer.R;
+import com.example.pathum.MusicPlayer.Utils.PlayList;
+import com.example.pathum.MusicPlayer.adapter.SongAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.muvindu.recyclerdemo.Utils.PlayList.createPlaylist;
-import static com.example.muvindu.recyclerdemo.Utils.PlayList.getPlaylist;
-import static com.example.muvindu.recyclerdemo.Utils.PlayList.queryPlaylists;
+import static com.example.pathum.MusicPlayer.Utils.PlayList.createPlaylist;
+import static com.example.pathum.MusicPlayer.Utils.PlayList.getPlaylist;
+import static com.example.pathum.MusicPlayer.Utils.PlayList.queryPlaylists;
 
 /**
  * Created by Muvindu on 12/8/2016.

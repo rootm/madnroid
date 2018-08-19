@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.adapter;
+package com.example.pathum.MusicPlayer.adapter;
 
 
 import android.content.Context;
@@ -14,10 +14,10 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
-import com.example.muvindu.recyclerdemo.Interface.playList_interface;
+import com.example.pathum.MusicPlayer.Interface.playList_interface;
 
-import com.example.muvindu.recyclerdemo.R;
-import com.example.muvindu.recyclerdemo.UI.PlayList_view;
+import com.example.pathum.MusicPlayer.R;
+import com.example.pathum.MusicPlayer.UI.PlayList_view;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;

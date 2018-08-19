@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.Fragments;
+package com.example.pathum.MusicPlayer.Fragments;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -15,12 +15,12 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.muvindu.recyclerdemo.R;
+import com.example.pathum.MusicPlayer.R;
 
 import java.util.ArrayList;
 
-import static com.example.muvindu.recyclerdemo.Utils.PlayList.addToPlaylist;
-import static com.example.muvindu.recyclerdemo.Utils.PlayList.queryPlaylists;
+import static com.example.pathum.MusicPlayer.Utils.PlayList.addToPlaylist;
+import static com.example.pathum.MusicPlayer.Utils.PlayList.queryPlaylists;
 
 public class BottomSheet_fragments extends BottomSheetDialogFragment {
 

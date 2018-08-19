@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.UI;
+package com.example.pathum.MusicPlayer.UI;
 
 import android.content.ContentResolver;
 import android.content.Intent;
@@ -14,18 +14,18 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.muvindu.recyclerdemo.Model.Song;
-import com.example.muvindu.recyclerdemo.R;
-import com.example.muvindu.recyclerdemo.adapter.AlbumSong_Adapter;
-import com.example.muvindu.recyclerdemo.adapter.PlayListAdaptor;
-import com.example.muvindu.recyclerdemo.adapter.PlayList_songsAdapter;
+import com.example.pathum.MusicPlayer.Model.Song;
+import com.example.pathum.MusicPlayer.R;
+import com.example.pathum.MusicPlayer.adapter.AlbumSong_Adapter;
+import com.example.pathum.MusicPlayer.adapter.PlayListAdaptor;
+import com.example.pathum.MusicPlayer.adapter.PlayList_songsAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.muvindu.recyclerdemo.Utils.PlayList.listSongs;
-import static com.example.muvindu.recyclerdemo.Utils.PlayList.queryPlaylists;
-import static com.example.muvindu.recyclerdemo.Utils.utils.getscreenSize;
+import static com.example.pathum.MusicPlayer.Utils.PlayList.listSongs;
+import static com.example.pathum.MusicPlayer.Utils.PlayList.queryPlaylists;
+import static com.example.pathum.MusicPlayer.Utils.utils.getscreenSize;
 
 public class PlayList_view extends AppCompatActivity {
     private RecyclerView recView;

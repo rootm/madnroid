@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.Utils;
+package com.example.pathum.MusicPlayer.Utils;
 
 
 import android.content.Context;
@@ -6,11 +6,12 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.support.design.widget.Snackbar;
 import android.util.Log;
 
 
 import com.bumptech.glide.Glide;
-import com.example.muvindu.recyclerdemo.UI.PlayList_view;
+import com.example.pathum.MusicPlayer.UI.PlayList_view;
 import com.google.common.io.ByteStreams;
 import com.google.gson.Gson;
 
@@ -101,6 +102,10 @@ public class EmotionClient {
 
                     map.put("happy", obj.getDouble("happiness"));
                     map.put("sad", obj.getDouble("sadness"));
+
+
+
+
 
                     Double max = (Collections.max(map.values()));  // This will return max value in the Hashmap
                     for (Map.Entry<String, Double> entry : map.entrySet()) {  // Itrate through hashmap

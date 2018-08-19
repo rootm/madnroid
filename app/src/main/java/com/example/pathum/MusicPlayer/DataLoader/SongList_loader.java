@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.DataLoader;
+package com.example.pathum.MusicPlayer.DataLoader;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -10,8 +10,8 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.widget.ImageView;
 
-import com.example.muvindu.recyclerdemo.Model.Song;
-import com.example.muvindu.recyclerdemo.R;
+import com.example.pathum.MusicPlayer.Model.Song;
+import com.example.pathum.MusicPlayer.R;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.UI;
+package com.example.pathum.MusicPlayer.UI;
 
 import android.content.ContentResolver;
 import android.content.ContentUris;
@@ -15,16 +15,16 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.example.muvindu.recyclerdemo.DataLoader.Album_loader;
-import com.example.muvindu.recyclerdemo.Model.Song;
-import com.example.muvindu.recyclerdemo.R;
-import com.example.muvindu.recyclerdemo.adapter.AlbumSong_Adapter;
-import com.example.muvindu.recyclerdemo.adapter.SongAdapter;
+import com.example.pathum.MusicPlayer.DataLoader.Album_loader;
+import com.example.pathum.MusicPlayer.Model.Song;
+import com.example.pathum.MusicPlayer.R;
+import com.example.pathum.MusicPlayer.adapter.AlbumSong_Adapter;
+import com.example.pathum.MusicPlayer.adapter.SongAdapter;
 
 import java.util.ArrayList;
 
 
-import static com.example.muvindu.recyclerdemo.Utils.utils.getscreenSize;
+import static com.example.pathum.MusicPlayer.Utils.utils.getscreenSize;
 
 public class AlbumSongs extends AppCompatActivity {
     private RecyclerView recView;

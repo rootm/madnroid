@@ -1,20 +1,13 @@
-package com.example.muvindu.recyclerdemo.UI;
+package com.example.pathum.MusicPlayer.UI;
 
 import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Matrix;
-import android.graphics.Paint;
 import android.graphics.Typeface;
-import android.graphics.drawable.BitmapDrawable;
 
 
-import android.media.ExifInterface;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.RemoteException;
 import android.provider.MediaStore;
@@ -39,45 +32,31 @@ import android.widget.ImageView;
 
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 import com.bumptech.glide.Glide;
-import com.example.muvindu.recyclerdemo.DataLoader.Album_loader;
-import com.example.muvindu.recyclerdemo.Fragments.album_fragment;
-import com.example.muvindu.recyclerdemo.Fragments.playList_fragment;
-import com.example.muvindu.recyclerdemo.Fragments.songList_fragment;
+import com.example.pathum.MusicPlayer.DataLoader.Album_loader;
+import com.example.pathum.MusicPlayer.Fragments.album_fragment;
+import com.example.pathum.MusicPlayer.Fragments.playList_fragment;
+import com.example.pathum.MusicPlayer.Fragments.songList_fragment;
 
-import com.example.muvindu.recyclerdemo.MusicService;
-import com.example.muvindu.recyclerdemo.R;
-import com.example.muvindu.recyclerdemo.Services.serviceConnection;
-import com.example.muvindu.recyclerdemo.Services.serviceStat;
-import com.example.muvindu.recyclerdemo.Utils.CameraController;
-import com.example.muvindu.recyclerdemo.Utils.EmotionClient;
-import com.example.muvindu.recyclerdemo.Utils.ImageHelper;
-import com.example.muvindu.recyclerdemo.adapter.pageAdapter;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
+import com.example.pathum.MusicPlayer.MusicService;
+import com.example.pathum.MusicPlayer.R;
+import com.example.pathum.MusicPlayer.Services.serviceStat;
+import com.example.pathum.MusicPlayer.Utils.EmotionClient;
+import com.example.pathum.MusicPlayer.adapter.pageAdapter;
 import com.google.android.gms.ads.AdView;
-import com.google.firebase.crash.FirebaseCrash;
 
-import static com.example.muvindu.recyclerdemo.MusicService.mediaPlayer;
-import static com.example.muvindu.recyclerdemo.Services.serviceConnection.player;
-import static com.example.muvindu.recyclerdemo.Utils.PlayList.createPlaylist;
+import static com.example.pathum.MusicPlayer.MusicService.mediaPlayer;
 
-import static com.example.muvindu.recyclerdemo.Utils.utils.getscreenSize;
-
-
-import com.google.gson.Gson;
+import static com.example.pathum.MusicPlayer.Utils.utils.getscreenSize;
 
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 

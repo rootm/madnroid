@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/wall1"
-    tools:context="com.example.muvindu.recyclerdemo.UI.player_main">
+    tools:context="com.example.pathum.MusicPlayer.UI.player_main">
 
     <RelativeLayout
         android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo;
+package com.example.pathum.MusicPlayer;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -34,10 +34,10 @@ import android.widget.RemoteViews;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.NotificationTarget;
-import com.example.muvindu.recyclerdemo.Audio.music;
-import com.example.muvindu.recyclerdemo.Model.Song;
+import com.example.pathum.MusicPlayer.Audio.music;
+import com.example.pathum.MusicPlayer.Model.Song;
 
-import com.example.muvindu.recyclerdemo.Services.PlaybackStatus;
+import com.example.pathum.MusicPlayer.Services.PlaybackStatus;
 
 import java.io.IOException;
 import java.util.List;

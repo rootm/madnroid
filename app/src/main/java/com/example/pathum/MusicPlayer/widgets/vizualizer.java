@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.widgets;
+package com.example.pathum.MusicPlayer.widgets;
 
 /**
  * Created by Muvindu on 1/1/2017.

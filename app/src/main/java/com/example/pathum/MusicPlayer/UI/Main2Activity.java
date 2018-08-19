@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.UI;
+package com.example.pathum.MusicPlayer.UI;
 
 import android.app.ActivityManager;
 import android.content.ComponentName;
@@ -20,16 +20,16 @@ import android.view.View;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
-import com.example.muvindu.recyclerdemo.Fragments.album_fragment;
-import com.example.muvindu.recyclerdemo.Fragments.songList_fragment;
-import com.example.muvindu.recyclerdemo.R;
-import com.example.muvindu.recyclerdemo.Services.MediaService;
-import com.example.muvindu.recyclerdemo.Services.serviceConnection;
-import com.example.muvindu.recyclerdemo.Services.serviceStat;
-import com.example.muvindu.recyclerdemo.adapter.SongAdapter;
-import com.example.muvindu.recyclerdemo.adapter.pageAdapter;
+import com.example.pathum.MusicPlayer.Fragments.album_fragment;
+import com.example.pathum.MusicPlayer.Fragments.songList_fragment;
+import com.example.pathum.MusicPlayer.R;
+import com.example.pathum.MusicPlayer.Services.MediaService;
+import com.example.pathum.MusicPlayer.Services.serviceConnection;
+import com.example.pathum.MusicPlayer.Services.serviceStat;
+import com.example.pathum.MusicPlayer.adapter.SongAdapter;
+import com.example.pathum.MusicPlayer.adapter.pageAdapter;
 
-import static com.example.muvindu.recyclerdemo.Services.serviceConnection.player;
+import static com.example.pathum.MusicPlayer.Services.serviceConnection.player;
 
 public class Main2Activity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener {
     public static final String Broadcast_stop = "com.example.muvindu.recyclerdemo.Stop";

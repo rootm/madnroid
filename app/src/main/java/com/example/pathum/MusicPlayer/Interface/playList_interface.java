@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.Interface;
+package com.example.pathum.MusicPlayer.Interface;
 
 import android.view.View;
 

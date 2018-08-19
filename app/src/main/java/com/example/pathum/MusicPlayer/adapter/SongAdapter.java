@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.adapter;
+package com.example.pathum.MusicPlayer.adapter;
 
 
 import android.content.ContentUris;
@@ -24,22 +24,22 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.muvindu.recyclerdemo.Audio.music;
+import com.example.pathum.MusicPlayer.Audio.music;
 
-import com.example.muvindu.recyclerdemo.Fragments.BottomSheet_fragments;
-import com.example.muvindu.recyclerdemo.Interface.recInterface;
-import com.example.muvindu.recyclerdemo.Model.Song;
-import com.example.muvindu.recyclerdemo.R;
+import com.example.pathum.MusicPlayer.Fragments.BottomSheet_fragments;
+import com.example.pathum.MusicPlayer.Interface.recInterface;
+import com.example.pathum.MusicPlayer.Model.Song;
+import com.example.pathum.MusicPlayer.R;
 
 
 import java.util.List;
 
 
-import static com.example.muvindu.recyclerdemo.MusicService.setSonglist1;
-import static com.example.muvindu.recyclerdemo.Services.MediaService.getListType;
-import static com.example.muvindu.recyclerdemo.Services.MediaService.setSonglist;
+import static com.example.pathum.MusicPlayer.MusicService.setSonglist1;
+import static com.example.pathum.MusicPlayer.Services.MediaService.getListType;
+import static com.example.pathum.MusicPlayer.Services.MediaService.setSonglist;
 
-import static com.example.muvindu.recyclerdemo.UI.player_main.btmPlayer;
+import static com.example.pathum.MusicPlayer.UI.player_main.btmPlayer;
 
 
 /**

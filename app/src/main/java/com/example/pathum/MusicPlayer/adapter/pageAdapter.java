@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.adapter;
+package com.example.pathum.MusicPlayer.adapter;
 
 import android.os.Bundle;
 
@@ -7,7 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.example.muvindu.recyclerdemo.Interface.recInterface;
+import com.example.pathum.MusicPlayer.Interface.recInterface;
 
 import java.util.ArrayList;
 import java.util.List;

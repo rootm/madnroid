@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.UI;
+package com.example.pathum.MusicPlayer.UI;
 
 import android.app.Activity;
 import android.support.v4.media.session.MediaControllerCompat;

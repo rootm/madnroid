@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">Recyclerdemo</string>
+    <string name="app_name">Music Player</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="banner_ad_unit_id">ca-app-pub-4283757754975308/5956835674</string>
+    <string name="subscription_key">adbe8ba01d3146aabb3dec9d4f97c1ea</string>
 </resources>

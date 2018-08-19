@@ -1,10 +1,10 @@
-package com.example.muvindu.recyclerdemo.Services;
+package com.example.pathum.MusicPlayer.Services;
 
 import android.app.ActivityManager;
 import android.content.Context;
 import android.widget.Toast;
 
-import com.example.muvindu.recyclerdemo.MusicService;
+import com.example.pathum.MusicPlayer.MusicService;
 
 /**
  * Created by Muvindu on 1/1/2017.

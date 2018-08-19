@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.Fragments;
+package com.example.pathum.MusicPlayer.Fragments;
 
 
 import android.Manifest;
@@ -25,17 +25,17 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.bumptech.glide.util.Util;
-import com.example.muvindu.recyclerdemo.DataLoader.Album_loader;
-import com.example.muvindu.recyclerdemo.Model.Album;
-import com.example.muvindu.recyclerdemo.R;
-import com.example.muvindu.recyclerdemo.Utils.SpacesItemDecoration;
-import com.example.muvindu.recyclerdemo.Utils.utils;
-import com.example.muvindu.recyclerdemo.adapter.AlbumAdapter;
-import com.example.muvindu.recyclerdemo.adapter.SongAdapter;
+import com.example.pathum.MusicPlayer.DataLoader.Album_loader;
+import com.example.pathum.MusicPlayer.Model.Album;
+import com.example.pathum.MusicPlayer.R;
+import com.example.pathum.MusicPlayer.Utils.SpacesItemDecoration;
+import com.example.pathum.MusicPlayer.Utils.utils;
+import com.example.pathum.MusicPlayer.adapter.AlbumAdapter;
+import com.example.pathum.MusicPlayer.adapter.SongAdapter;
 
 import java.util.ArrayList;
 
-import static com.example.muvindu.recyclerdemo.Utils.utils.getscreenSize;
+import static com.example.pathum.MusicPlayer.Utils.utils.getscreenSize;
 
 
 /**

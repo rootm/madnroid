@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.Fragments;
+package com.example.pathum.MusicPlayer.Fragments;
 
 import android.Manifest;
 
@@ -18,13 +18,13 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 
-import com.example.muvindu.recyclerdemo.R;
-import com.example.muvindu.recyclerdemo.adapter.PlayListAdaptor;
+import com.example.pathum.MusicPlayer.R;
+import com.example.pathum.MusicPlayer.adapter.PlayListAdaptor;
 
 
-import static com.example.muvindu.recyclerdemo.Utils.PlayList.createPlaylist;
-import static com.example.muvindu.recyclerdemo.Utils.PlayList.queryPlaylists;
-import static com.example.muvindu.recyclerdemo.Utils.utils.getscreenSize;
+import static com.example.pathum.MusicPlayer.Utils.PlayList.createPlaylist;
+import static com.example.pathum.MusicPlayer.Utils.PlayList.queryPlaylists;
+import static com.example.pathum.MusicPlayer.Utils.utils.getscreenSize;
 
 public class playList_fragment extends Fragment {
 

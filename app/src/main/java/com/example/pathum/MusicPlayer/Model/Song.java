@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.Model;
+package com.example.pathum.MusicPlayer.Model;
 
 import android.graphics.Bitmap;
 import android.media.Image;

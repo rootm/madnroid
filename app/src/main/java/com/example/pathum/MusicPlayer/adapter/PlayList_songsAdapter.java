@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.adapter;
+package com.example.pathum.MusicPlayer.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,19 +11,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.muvindu.recyclerdemo.Audio.music;
-import com.example.muvindu.recyclerdemo.Interface.playList_interface;
-import com.example.muvindu.recyclerdemo.Interface.playList_songList;
-import com.example.muvindu.recyclerdemo.Model.Song;
-import com.example.muvindu.recyclerdemo.R;
-import com.example.muvindu.recyclerdemo.UI.nowPlaying;
+import com.example.pathum.MusicPlayer.Audio.music;
+import com.example.pathum.MusicPlayer.Interface.playList_interface;
+import com.example.pathum.MusicPlayer.Interface.playList_songList;
+import com.example.pathum.MusicPlayer.Model.Song;
+import com.example.pathum.MusicPlayer.R;
+import com.example.pathum.MusicPlayer.UI.nowPlaying;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.muvindu.recyclerdemo.MusicService.setSonglist1;
-import static com.example.muvindu.recyclerdemo.Services.MediaService.getListType;
-import static com.example.muvindu.recyclerdemo.Services.MediaService.setSonglist;
+import static com.example.pathum.MusicPlayer.MusicService.setSonglist1;
+import static com.example.pathum.MusicPlayer.Services.MediaService.getListType;
+import static com.example.pathum.MusicPlayer.Services.MediaService.setSonglist;
 
 public class PlayList_songsAdapter extends RecyclerView.Adapter<PlayList_songsAdapter.ViewHolder> {
     public static List<Song> PlayList_songList;

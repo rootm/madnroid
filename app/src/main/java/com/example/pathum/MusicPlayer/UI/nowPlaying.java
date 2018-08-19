@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.UI;
+package com.example.pathum.MusicPlayer.UI;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -32,16 +32,16 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
-import com.example.muvindu.recyclerdemo.MusicService;
-import com.example.muvindu.recyclerdemo.R;
+import com.example.pathum.MusicPlayer.MusicService;
+import com.example.pathum.MusicPlayer.R;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-import static com.example.muvindu.recyclerdemo.MusicService.mediaPlayer;
-import static com.example.muvindu.recyclerdemo.Services.serviceConnection.player;
-import static com.example.muvindu.recyclerdemo.Utils.utils.getscreenHeigth;
+import static com.example.pathum.MusicPlayer.MusicService.mediaPlayer;
+import static com.example.pathum.MusicPlayer.Services.serviceConnection.player;
+import static com.example.pathum.MusicPlayer.Utils.utils.getscreenHeigth;
 
 
 public class nowPlaying extends AppCompatActivity {

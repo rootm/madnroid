@@ -12,7 +12,7 @@
  * See the GNU General Public License for more details.
  */
 
-package com.example.muvindu.recyclerdemo.Model;
+package com.example.pathum.MusicPlayer.Model;
 
 public class Artist {
 

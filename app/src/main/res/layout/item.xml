@@ -44,7 +44,7 @@
            android:layout_toRightOf="@id/album_image"
            />
 
-    <com.example.muvindu.recyclerdemo.widgets.vizualizer
+    <com.example.pathum.MusicPlayer.widgets.vizualizer
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_gravity="center_vertical"

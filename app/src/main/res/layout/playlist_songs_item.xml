@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:id="@+id/playListSongContainer">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:text="TextViewsdjsadasdkasndnsabmfnbnasmbdfnsabdnmbasnmbdnasbdnmbasnmdbnasbdmasndbamsdsa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:id="@+id/listSong_name"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:layout_weight="1"
+        android:textSize="@dimen/songName"
+        android:layout_gravity="center_vertical"/>
+
+
+
+</LinearLayout>

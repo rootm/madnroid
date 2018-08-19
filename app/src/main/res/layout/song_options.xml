@@ -67,11 +67,14 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <ImageView
+            <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|center_horizontal"
-                android:background="@drawable/add" />
+                android:background="@drawable/add"
+                android:id="@+id/addTo_button"
+                android:clickable="true"
+                />
 
             <TextView
                 android:layout_width="wrap_content"

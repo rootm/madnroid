@@ -1,11 +1,11 @@
-package com.example.muvindu.recyclerdemo.UI;
+package com.example.pathum.MusicPlayer.UI;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.muvindu.recyclerdemo.R;
+import com.example.pathum.MusicPlayer.R;
 
 public class notification extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.Audio;
+package com.example.pathum.MusicPlayer.Audio;
 
 import android.app.Activity;
 
@@ -7,17 +7,17 @@ import android.content.Intent;
 
 import android.os.Handler;
 
-import com.example.muvindu.recyclerdemo.Model.Song;
-import com.example.muvindu.recyclerdemo.MusicService;
-import com.example.muvindu.recyclerdemo.Services.MediaService;
-import com.example.muvindu.recyclerdemo.Services.serviceConnection;
-import com.example.muvindu.recyclerdemo.Services.serviceStat;
+import com.example.pathum.MusicPlayer.Model.Song;
+import com.example.pathum.MusicPlayer.MusicService;
+import com.example.pathum.MusicPlayer.Services.MediaService;
+import com.example.pathum.MusicPlayer.Services.serviceConnection;
+import com.example.pathum.MusicPlayer.Services.serviceStat;
 
 
 import java.util.List;
 
-import static com.example.muvindu.recyclerdemo.Services.serviceConnection.player;
-import static com.example.muvindu.recyclerdemo.Services.serviceConnection.serviceBound;
+import static com.example.pathum.MusicPlayer.Services.serviceConnection.player;
+import static com.example.pathum.MusicPlayer.Services.serviceConnection.serviceBound;
 
 
 /**

@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.Services;
+package com.example.pathum.MusicPlayer.Services;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -8,7 +8,7 @@ import android.os.IBinder;
 import android.support.v4.content.ContextCompat;
 import android.widget.Toast;
 
-import com.example.muvindu.recyclerdemo.UI.Main2Activity;
+import com.example.pathum.MusicPlayer.UI.Main2Activity;
 
 import java.sql.Wrapper;
 

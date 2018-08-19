@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.Utils;
+package com.example.pathum.MusicPlayer.Utils;
 
 import android.content.ContentResolver;
 import android.content.ContentUris;

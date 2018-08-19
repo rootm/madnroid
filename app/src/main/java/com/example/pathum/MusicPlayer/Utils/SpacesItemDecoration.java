@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.Utils;
+package com.example.pathum.MusicPlayer.Utils;
 
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;

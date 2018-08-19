@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.UI;
+package com.example.pathum.MusicPlayer.UI;
 
 import android.content.ContentResolver;
 import android.content.ContentUris;
@@ -16,10 +16,10 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.example.muvindu.recyclerdemo.DataLoader.SongList_loader;
-import com.example.muvindu.recyclerdemo.Model.Song;
-import com.example.muvindu.recyclerdemo.R;
-import com.example.muvindu.recyclerdemo.adapter.SongAdapter;
+import com.example.pathum.MusicPlayer.DataLoader.SongList_loader;
+import com.example.pathum.MusicPlayer.Model.Song;
+import com.example.pathum.MusicPlayer.R;
+import com.example.pathum.MusicPlayer.adapter.SongAdapter;
 
 import java.io.FileDescriptor;
 import java.util.ArrayList;

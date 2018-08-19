@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.adapter;
+package com.example.pathum.MusicPlayer.adapter;
 
 import android.content.ContentUris;
 import android.content.Context;
@@ -26,16 +26,16 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.target.Target;
-import com.example.muvindu.recyclerdemo.Model.Album;
-import com.example.muvindu.recyclerdemo.Model.Song;
-import com.example.muvindu.recyclerdemo.R;
-import com.example.muvindu.recyclerdemo.UI.AlbumSongs;
-import com.example.muvindu.recyclerdemo.UI.nowPlaying;
+import com.example.pathum.MusicPlayer.Model.Album;
+import com.example.pathum.MusicPlayer.Model.Song;
+import com.example.pathum.MusicPlayer.R;
+import com.example.pathum.MusicPlayer.UI.AlbumSongs;
+import com.example.pathum.MusicPlayer.UI.nowPlaying;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static com.example.muvindu.recyclerdemo.Services.serviceConnection.player;
+import static com.example.pathum.MusicPlayer.Services.serviceConnection.player;
 
 /**
  * Created by Muvindu on 1/3/2017.

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.muvindu.recyclerdemo">
+    package="com.example.pathum.MusicPlayer">
     android:grantUriPermissions="true"
     <permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
 
@@ -9,6 +9,9 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.CAMERA"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -26,22 +29,19 @@
         <receiver android:name="android.support.v4.media.session.MediaButtonReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
-
             </intent-filter>
         </receiver>
 
-        <service android:name=".Services.MediaService" android:exported="true" >
-
-        </service>
-
-        <service android:name=".MusicService" android:exported="true" >
+        <service
+            android:name=".Services.MediaService"
+            android:exported="true" />
+        <service
+            android:name=".MusicService"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.media.browse.MediaBrowserService" />
-
-
             </intent-filter>
         </service>
-
 
         <activity android:name=".UI.player_main">
             <intent-filter>
@@ -53,7 +53,8 @@
         <activity android:name=".UI.nowPlaying" />
         <activity android:name=".UI.AlbumSongs" />
         <activity android:name=".UI.notification" />
-        <activity android:name=".UI.Main3Activity"></activity>
+        <activity android:name=".UI.Main3Activity" />
+        <activity android:name=".UI.PlayList_view"></activity>
     </application>
 
 </manifest>

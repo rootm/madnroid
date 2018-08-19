@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.adapter;
+package com.example.pathum.MusicPlayer.adapter;
 
 import android.content.ContentUris;
 import android.content.Context;
@@ -13,15 +13,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.muvindu.recyclerdemo.Audio.music;
-import com.example.muvindu.recyclerdemo.Interface.Album_songList;
-import com.example.muvindu.recyclerdemo.Model.Song;
-import com.example.muvindu.recyclerdemo.R;
+import com.example.pathum.MusicPlayer.Audio.music;
+import com.example.pathum.MusicPlayer.Interface.Album_songList;
+import com.example.pathum.MusicPlayer.Model.Song;
+import com.example.pathum.MusicPlayer.R;
 
 import java.util.List;
 
-import static com.example.muvindu.recyclerdemo.Services.MediaService.getListType;
-import static com.example.muvindu.recyclerdemo.Services.MediaService.setSonglist;
+import static com.example.pathum.MusicPlayer.Services.MediaService.getListType;
+import static com.example.pathum.MusicPlayer.Services.MediaService.setSonglist;
 
 
 /**

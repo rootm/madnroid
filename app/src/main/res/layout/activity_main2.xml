@@ -5,7 +5,7 @@
     android:id="@+id/activity_main2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.muvindu.recyclerdemo.UI.Main2Activity">
+    tools:context="com.example.pathum.MusicPlayer.UI.Main2Activity">
 
     <LinearLayout
         android:orientation="vertical"

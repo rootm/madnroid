@@ -1,4 +1,4 @@
-package com.example.muvindu.recyclerdemo.Model;
+package com.example.pathum.MusicPlayer.Model;
 
 /**
  * Created by Muvindu on 1/3/2017.
